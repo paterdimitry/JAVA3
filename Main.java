@@ -2,9 +2,9 @@ package lesson1.task3;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        Box<Apple> box1 = new Box<>(Apple.class);
-        Box<Apple> box2 = new Box<>(Apple.class);
-        Box<Orange> box3 = new Box<>(Orange.class);
+        Box<Apple> box1 = new Box<>();
+        Box<Apple> box2 = new Box<>();
+        Box<Orange> box3 = new Box<>();
 
         box1.add(new Apple(), 4);
         box2.add(new Apple(), 6);

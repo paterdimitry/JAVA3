@@ -5,25 +5,19 @@ import java.util.ArrayList;
 public class Box<E extends Fruit> {
 
     private ArrayList<E> fruits;
-    private E obj;
 
-    public Box(Class<E> eClass) throws Exception {
+    public Box() {
         this.fruits = new ArrayList<>();
-        obj = eClass.newInstance(); //создаем объект полученного класса, чтобы потом взять у него метод getWeight();
+
     }
 
-    public double getWeight() {
-        return obj.getWeight() * fruits.size();
-    }
-
-    /* Альтернативный и более простой вариант
     public double getWeight() {
         double sum = 0;
         for (E fruit : fruits) {
-            sum+=fruit.getWeight();
+            sum += fruit.getWeight();
         }
         return sum;
-    }*/
+    }
 
     public void add(E value) {
         fruits.add(value);
